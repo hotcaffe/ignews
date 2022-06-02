@@ -1,0 +1,16 @@
+.button {
+  border-radius: 2rem;
+  background: var(--yellow-500);
+  color: var(--gray-900);
+  transition: filter 0.2s;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+
+  width: 16rem;
+  height: 4rem;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
