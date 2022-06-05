@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { signIn, signOut, useSession } from "next-auth/react";
 import styles from "./styles.module.scss";
 
 export function SignInButton() {
-  const [isLogged, setIsLogged] = useState(false);
+  const {data: sessions} = useSession()
 
-  return isLogged ? (
+  console.log(sessions)
+
+  return sessions ? (
     <button className={styles.logged}>
       <FaGithub />
-      Hotcaffe
-      <IoMdClose className={styles.close} />
+      {sessions.user.name}
+      <IoMdClose className={styles.close} onClick={() => signOut()}/>
     </button>
   ) : (
-    <button className={styles.signIn}>
+    <button className={styles.signIn} onClick={() => signIn('github')}>
       <FaGithub />
       Sign in with GitHub
     </button>
