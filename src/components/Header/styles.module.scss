@@ -29,6 +29,10 @@
       padding: 0 0.5rem;
       line-height: 6rem;
 
+      &:hover{
+        color: var(--white);
+      }
+
       &.active {
         color: var(--white);
         font-weight: 700;

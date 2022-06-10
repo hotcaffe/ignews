@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prismicio/client": "^6.5.1",
     "@stripe/stripe-js": "^1.31.0",
     "axios": "^0.27.2",
     "faunadb": "^4.5.4",
     "next": "12.1.6",
     "next-auth": "^4.3.4",
+    "prismic-dom": "^2.2.7",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.36",
+    "@types/prismic-dom": "^2.1.1",
     "@types/react": "^18.0.9",
     "@types/sass": "^1.43.1",
     "eslint": "8.16.0",
